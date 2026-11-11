@@ -48,3 +48,6 @@ int incident_number PK,FK
 }
 POLICE_OFFICER||--o{OFFICER__INCIDENT:assigned_to
 INCIDENT||--o{OFFICER__INCIDENT:includes
+
+Açıklama : Veritabanının emniyet müdürlüğü yönetim sistemi için önemli ve uyarlanabilir olduğunu düşündüğümden dolayı bu konuyu seçmek istedim. Sınıflar oluşturdum ve sınıflar arası ilişkiler kurdum. Varlıklara nitelikler tanımladım. Bunları ER diyagramı üzerinde gösteren bir kod oluşturdum. Kişiye özel kısımlarda PK kullandım, bazı kısımlarda ortak tablo oluşturup FK tanımladım.
+
