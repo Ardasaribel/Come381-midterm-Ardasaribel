@@ -1,19 +1,19 @@
-# EMNIYET MUDURLUGU YONETIM VE OLAY TAKIP SISTEMI
+-- EMNIYET MUDURLUGU YONETIM VE OLAY TAKIP SISTEMI
 
-# 1. DEPARTMENT: Emniyet birimleri
+-- 1. DEPARTMENT: Emniyet birimleri
 CREATE TABLE department (
     department_id INT PRIMARY KEY,
     department_name VARCHAR(100) NOT NULL,
     location VARCHAR(150)
 );
 
-# 2. RANK: Polis rutbeleri
+-- 2. RANK: Polis rutbeleri
 CREATE TABLE rank (
     rank_id INT PRIMARY KEY,
     rank_name VARCHAR(50) NOT NULL
 );
 
-# 3. POLICE_OFFICER: Polis memurlari
+-- 3. POLICE_OFFICER: Polis memurlari
 CREATE TABLE police_officer (
     officer_id INT PRIMARY KEY,
     registration_number VARCHAR(20) UNIQUE NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE police_officer (
         REFERENCES department(department_id)
 );
 
-# 4. CITIZEN: Vatandas bilgileri
+-- 4. CITIZEN: Vatandas bilgileri
 CREATE TABLE citizen (
     citizen_id INT PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE citizen (
     birth_date DATE
 );
 
-# 5. INCIDENT: Olay bilgileri
+-- 5. INCIDENT: Olay bilgileri
 CREATE TABLE incident (
     incident_number INT PRIMARY KEY,
     incident_type VARCHAR(100) NOT NULL,
@@ -54,7 +54,7 @@ CREATE TABLE incident (
     status VARCHAR(30)
 );
 
-# 6. REPORT: Ihbar kayitlari
+-- 6. REPORT: Ihbar kayitlari
 CREATE TABLE report (
     report_id INT PRIMARY KEY,
     report_date DATE NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE report (
         REFERENCES citizen(national_id)
 );
 
-# 7. OFFICER_INCIDENT: Polis ve olay iliskisi
+-- 7. OFFICER_INCIDENT: Polis ve olay iliskisi
 CREATE TABLE officer_incident (
     personnel_number INT,
     incident_number INT,
@@ -88,7 +88,7 @@ CREATE TABLE officer_incident (
         REFERENCES incident(incident_number)
 );
 
-# 8. CITIZEN_RECORD: Vatandas olay kayitlari
+-- 8. CITIZEN_RECORD: Vatandas olay kayitlari
 CREATE TABLE citizen_record (
     record_id INT PRIMARY KEY,
     citizen_id INT NOT NULL,
