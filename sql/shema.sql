@@ -105,3 +105,7 @@ CREATE TABLE citizen_record (
         FOREIGN KEY (incident_number)
         REFERENCES incident(incident_number)
 );
+    CONSTRAINT fk_record_incident
+        FOREIGN KEY (incident_number)
+        REFERENCES incident(incident_number)
+);
