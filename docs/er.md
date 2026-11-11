@@ -1,4 +1,4 @@
-Senaryo: Emniyet Müdürlüğü Yönetim ve Olay Takip Sistemi
+SENARYO : Emniyet Müdürlüğü Yönetim ve Olay Takip Sistemi
 
 Bir emniyet müdürlüğü, sorumluluk bölgesinde meydana gelen olayları, görevli polis memurlarını ve vatandaşlardan gelen ihbarları 
 düzenli bir şekilde takip edebilmek için bir otomasyon sistemi oluşturmak istemektedir.
@@ -13,6 +13,7 @@ Vatandaşlardan gelen ihbarlar ise ihbar kodu, saati ve ihbarı yapan vatandaşl
 ad-soyad ve iletişim bilgileriyle kaydedilecektir.
 
 Ayrıca her olayda birden fazla polis memuru görev alabileceği, her polis memuru da farklı olaylarda görevlendirilebilecektir.
+
 
 erDiagram
 POLICE_UNIT {string unit_number PK
@@ -49,5 +50,6 @@ int incident_number PK,FK
 POLICE_OFFICER||--o{OFFICER__INCIDENT:assigned_to
 INCIDENT||--o{OFFICER__INCIDENT:includes
 
-Açıklama : Veritabanının emniyet müdürlüğü yönetim sistemi için önemli ve uyarlanabilir olduğunu düşündüğümden dolayı bu konuyu seçmek istedim. Sınıflar oluşturdum ve sınıflar arası ilişkiler kurdum. Varlıklara nitelikler tanımladım. Bunları ER diyagramı üzerinde gösteren bir kod oluşturdum. Kişiye özel kısımlarda PK kullandım, bazı kısımlarda ortak tablo oluşturup FK tanımladım.
+
+AÇIKLAMA : Veritabanının emniyet müdürlüğü yönetim sistemi için önemli ve uyarlanabilir olduğunu düşündüğümden dolayı bu konuyu seçmek istedim. Sınıflar oluşturdum ve sınıflar arası ilişkiler kurdum. Varlıklara nitelikler tanımladım. Bunları ER diyagramı üzerinde gösteren bir kod oluşturdum. Kişiye özel kısımlarda PK kullandım, bazı kısımlarda ortak tablo oluşturup FK tanımladım.
 
