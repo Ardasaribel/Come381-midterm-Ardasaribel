@@ -7,7 +7,7 @@ WHERE phone = NULL;
 
 Beklenen Çıktı:
  full_name | phone
------------+-------
+
 (0 rows)
 
 Yorum:
@@ -21,11 +21,11 @@ FROM customer
 WHERE phone IS NULL;
 
 Beklenen Çıktı:
-   full_name   | phone
----------------+-------
- Mehmet Kaya   | NULL
- Can Arslan    | NULL
- Selin Öztürk  | NULL
+   full_name     phone
+
+ Mehmet Kaya     NULL
+ Can Arslan      NULL
+ Selin Öztürk    NULL
 (3 rows)
 
 Yorum:
