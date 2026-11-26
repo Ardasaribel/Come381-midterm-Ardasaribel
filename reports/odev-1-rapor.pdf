@@ -1,0 +1,21 @@
+Arda Sarıbel- 202402009023 - YBS
+
+1)Ne Yaptım
+Bu ödevde emniyet müdürlüğü yönetim ve olay takip sistemini konu alan bir hikaye oluşturdum. 
+Varlık, nitelik, P.k ve F.k tanımladığım bir ER diyagramı
+oluşturdum. Daha sonra bunu mermaid uygulamasıyla kod haline getirip repoma ekledim. 
+
+2)En önemli karar ve gerekçesi
+karar 1) 2 tane M:N 2 tane 1:N ilişkisi kurdum.
+
+3)Beklemediğim şey/ yaptığım hata:
+İlişki kurmada hata yapacağımı beklemiyordum fakat bir kaç kez hata yaptığımı farkettim. 
+Ayrıca P.k ve F.k'yı seçerken zorlandım.
+
+4)Yapay zeka kullanımı:
+Mermaid kod yazımında ve yaptıklarımı en son kontrol ettirmek için kullandım.
+
+5)öz kontrol:
+Bu ödevde eksiğim yok.
+
+
