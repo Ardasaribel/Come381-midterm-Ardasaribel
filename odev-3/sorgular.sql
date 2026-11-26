@@ -1,4 +1,5 @@
 -- Q1: Her müşterinin toplam harcama tutarını listele.
+--Her müşterinin toplam harcama tutarını hesaplayarak müşterileri en yüksek harcamadan en düşük harcamaya doğru sıralar.
 SELECT c.full_name,
        SUM(oi.quantity * p.price) AS toplam_harcama
 FROM customer c
@@ -9,6 +10,7 @@ GROUP BY c.customer_id, c.full_name
 ORDER BY toplam_harcama DESC;
 
 -- Q2: Her ürün kategorisinin ortalama fiyatını ve toplam sipariş edilen ürün adetini listele.
+--Ürün kategorilerine göre ortalama fiyatı ve sipariş edilen toplam ürün miktarını hesaplayarak kategorileri karşılaştırır.
 WITH category_prices AS (
     SELECT category, AVG(price) AS ortalama_fiyat
     FROM product
@@ -28,11 +30,13 @@ LEFT JOIN category_quantities cq ON cp.category = cq.category
 ORDER BY cp.category;
 
 -- Q3: Ürünlerin numarasını, adını, kategorisini ve fiyatını listele.
+--Ürünlerin ürün numarasını, adını, kategorisini ve fiyatını listeleyerek ürün bilgilerini görüntüler.
 SELECT product_id, name, category, price
 FROM product
 ORDER BY product_id;
 
 -- Q4: Siparişlerin toplam tutarlarını hesaplayarak tüm kafenin ortalama sipariş tutarını listele.
+--Her siparişin toplam tutarını hesaplayıp bu tutarların ortalamasını bulur.
 WITH order_totals AS (
     SELECT oi.order_id,
            SUM(oi.quantity * p.price) AS siparis_tutari
@@ -44,14 +48,18 @@ SELECT AVG(siparis_tutari) AS ortalama_siparis_tutari
 FROM order_totals;
 
 -- Q5: Fiyatı 50 TL ve altı olan ürünleri listele.
+--Fiyatı 50 TL veya daha düşük olan ürünleri fiyatlarına göre sıralayarak listeler.
 SELECT name, price
 FROM product
 WHERE price <= 50
 ORDER BY price;
 
 -- Q6: Her siparişte bulunan toplam ürün adedini sipariş numarasıyla birlikte listele.
+-- Her siparişte bulunan toplam ürün miktarını sipariş numarasıyla birlikte hesaplayıp listeler.
 SELECT order_id,
        SUM(quantity) AS toplam_urun_adedi
 FROM order_item
 GROUP BY order_id
 ORDER BY order_id;
+
+      
