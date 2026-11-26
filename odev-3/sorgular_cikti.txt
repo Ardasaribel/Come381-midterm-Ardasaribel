@@ -1,65 +1,64 @@
 --Q1:Her müşterinin toplam harcama tutarını listele.
-   full_name    | toplam_harcama
-----------------+----------------
- Ayşe Demir     | 380.00
- Zeynep Aksoy   | 340.00
- Elif Yıldız    | 285.00
- Mehmet Kaya     | 230.00
- Can Arslan     | 190.00
- Selin Öztürk   | 130.00
- Burak Çelik    | 120.00
+   full_name      toplam_harcama
+
+ Ayşe Demir       380.00
+ Zeynep Aksoy     340.00
+ Elif Yıldız      285.00
+ Mehmet Kaya      230.00
+ Can Arslan       190.00
+ Selin Öztürk     130.00
+ Burak Çelik      120.00
 (7 rows)
 
 --Q2:Her ürün kategorisinin ortalama fiyatını ve toplam sipariş edilen ürün adetini listele.
-    category     | ortalama_fiyat | toplam_siparis_adedi
------------------+----------------+---------------------
- Sandviç         | 80.00          | 6
- Soğuk İçecek    | 35.00          | 7
- Sıcak İçecek    | 38.33          | 13
- Tatlı           | 85.00          | 5
+    category       ortalama_fiyat   toplam_siparis_adedi
+
+ Sandviç           80.00            6
+ Soğuk İçecek      35.00            7
+ Sıcak İçecek      38.33            13
+ Tatlı             85.00            5
 (4 rows)
 
 --Q3:Ürünlerin numarasını, adını, kategorisini ve fiyatını listele.
- product_id |       name       |    category    | price
-------------+------------------+---------------+-------
- 1          | Çay              | Sıcak İçecek  | 20.00
- 2          | Türk Kahvesi     | Sıcak İçecek  | 35.00
- 3          | Latte            | Sıcak İçecek  | 60.00
- 4          | Limonata         | Soğuk İçecek  | 40.00
- 5          | Buzlu Çay        | Soğuk İçecek  | 30.00
- 6          | Cheesecake       | Tatlı         | 85.00
- 7          | Tost             | Sandviç       | 70.00
- 8          | Club Sandviç     | Sandviç       | 90.00
+ product_id         name            category      price
+
+ 1            Çay                Sıcak İçecek    20.00
+ 2            Türk Kahvesi       Sıcak İçecek    35.00
+ 3            Latte              Sıcak İçecek    60.00
+ 4            Limonata           Soğuk İçecek    40.00
+ 5            Buzlu Çay          Soğuk İçecek    30.00
+ 6            Cheesecake         Tatlı           85.00
+ 7            Tost               Sandviç         70.00
+ 8            Club Sandviç       Sandviç         90.00
 
 --Q4:Siparişlerin toplam tutarlarını hesaplayarak tüm kafenin ortalama sipariş tutarını listele.
   ortalama_siparis_tutari
---------------------------
  139.5833333333333333
 (1 row)
 
 --Q5:Fiyatı 50 TL ve altı olan ürünleri listele.
-       name       | price
-------------------+-------
- Çay              | 20.00
- Buzlu Çay        | 30.00
- Türk Kahvesi     | 35.00
- Limonata         | 40.00
+       name         price
+
+ Çay                20.00
+ Buzlu Çay          30.00
+ Türk Kahvesi       35.00
+ Limonata           40.00
 (4 rows)
 
 --Q6:Her siparişte bulunan toplam ürün adedini sipariş numarasıyla birlikte listele.
- order_id | toplam_urun_adedi
-----------+------------------
- 1        | 2
- 2        | 3
- 3        | 2
- 4        | 2
- 5        | 3
- 6        | 3
- 7        | 3
- 8        | 2
- 9        | 3
- 10       | 3
- 11       | 3
- 12       | 2
+ order_id  toplam_urun_adedi
+
+ 1          2
+ 2          3
+ 3          2
+ 4          2
+ 5          3
+ 6          3
+ 7          3
+ 8          2
+ 9          3
+ 10         3
+ 11         3
+ 12         2
 (12 rows)
 (8 rows)
